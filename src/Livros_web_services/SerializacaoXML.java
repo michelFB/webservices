@@ -6,6 +6,7 @@ public class SerializacaoXML {
     
     public static void main(String[] args) {
         XStream xstream = new XStream();
+        xstream.alias("livro", Livro.class);
         Livro livro = new Livro(2000, "Assim Falou Zaratustra", "123");
         String xml = xstream.toXML(livro);
         System.out.println("XML = ");
